@@ -51,7 +51,7 @@ class SendSportNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'title' => 'New Sport Added', // Ensure a title is always present
+            'title' => 'New Sport Added',
             'sport_id' => $this->sport->id,
             'sport_name' => $this->sport->name,
             'message' => "A new sport has been added: {$this->sport->name}",

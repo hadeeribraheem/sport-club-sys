@@ -44,7 +44,7 @@ class AdminUserControllerResource extends Controller
             ->get();
 
         $availableTeams = TeamResource::collection($availableTeams)->resolve();
-
+        //dd($availableTeams);
         $sportProperties = SportProperty::with('sportType')
                             ->where('type', 'individual')
                                 ->orderBy('sport_id')
