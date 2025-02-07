@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminUserControllerResource;
 use App\Http\Controllers\Admin\Auth\AdminAuthController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SportControllerResource;
 use App\Http\Controllers\Admin\TeamControllerResource;
 use App\Http\Controllers\Auth\LogoutController;
@@ -36,7 +37,11 @@ Route::group(['prefix' => 'admin'], function () {
         ]);
         Route::get('/admin/notifications', [NotificationController::class, 'index'])->name('admin.notifications');
         Route::get('/admin/notifications/{id}/read', [NotificationController::class, 'markAsRead'])->name('admin.notifications.read');
+
         Route::get('/admin/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+        Route::get('/admin/settings', [SettingController::class, 'index'])->name('settings.index');
+        Route::post('/admin/settings/update', [SettingController::class, 'update'])->name('settings.update');
     });
 });
 Route::get('/logout', [LogoutController::class, 'logout_system'])->name('logout');

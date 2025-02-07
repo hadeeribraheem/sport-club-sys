@@ -64,6 +64,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="{{ route('settings.index') }}" class="nav-link collapsed">
+                <i class="bi bi-gear"></i>
+                <span>Settings</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="{{route('admin.notifications')}}" class="nav-link collapsed">
                 <i class="fa-regular fa-bell"></i>
                 <span>Notifications</span>
