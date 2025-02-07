@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             TeamsTableSeeder::class,
             SportPropertiesTableSeeder::class,
             PropertyValuesTableSeeder::class,
+            SettingSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
 

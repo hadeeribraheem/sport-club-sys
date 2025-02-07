@@ -22,8 +22,7 @@ class TeamFormRequest extends FormRequest
      */
     public function rules(): array
     {
-        $sportTypeId = $this->input('sport_type_id');
-        $maxUsersPerTeam = Setting::where('default_sport_id', $sportTypeId)->value('max_users_per_team') ?? 20;
+        $maxUsersPerTeam = ( Setting::first()->max_users_per_team) - 2 ; // this 2 is the other roles in team not player (coach/captain)
 
         return [
             'name' => 'required|string|max:255|unique:teams,name,' . ($this->team ? $this->team->id : 'NULL'),
