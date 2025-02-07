@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->foreignId('team_id')->nullable()->constrained('teams')->onDelete('set null'); // ✅ Now safe
+            $table->foreignId('team_id')->nullable()->constrained('teams')->onDelete('set null');
         });
 
         Schema::table('teams', function (Blueprint $table) {
-            $table->foreignId('coach_id')->nullable()->constrained('users')->onDelete('set null'); // ✅ Now safe
-            $table->foreignId('captain_id')->nullable()->constrained('users')->onDelete('set null'); // ✅ Now safe
+            $table->foreignId('coach_id')->nullable()->constrained('users')->onDelete('set null');
+            $table->foreignId('captain_id')->nullable()->constrained('users')->onDelete('set null');
         });
     }
 

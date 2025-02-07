@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sport_properties', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // Property name ---> Example: "Matches Played"
+            $table->string('name'); // Property name ---> "Matches Played"
             $table->string('input_type');
             /* data types for property can be: */
             /*  date  --> تاريخ آخر مباراة لعبها اللاعب
