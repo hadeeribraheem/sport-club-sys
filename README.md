@@ -4,5 +4,5 @@ php artisan migrate --seed
 ```
 video:
 
-https://github.com/user-attachments/assets/1f084480-1289-4e27-ab33-d40efc97c7c4
+https://github.com/user-attachments/assets/0338f9d8-a7a0-4d3b-826a-c21fcf8c2021
 
