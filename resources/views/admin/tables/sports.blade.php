@@ -29,7 +29,7 @@
                             </a>
                             <a href="javascript:void(0);"
                                class="btn btn-sm btn-danger rounded-circle m-1 delete-button"
-                               data-url="{{ route('sports.destroy', $sport['id']) }}">
+                               data-url="/delete-item?model_name=SportType&id={{ $sport['id'] }}">
                                 <i class="bi bi-trash3-fill text-white"></i>
                             </a>
                         </td>
